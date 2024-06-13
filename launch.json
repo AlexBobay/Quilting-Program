@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch localhost",
+            "type": "Firefox",
+            "request": "launch",
+            "program": "Quilting Program/quiltsite.html",
+            "args": [],
+            "cwd": "Quilting Program",
+            "stopOnEntry": false,
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "url": "http://localhost/quiltsite.html",
+            "pathMappings": [{
+                "url": "http://localhost",
+                "path": "Quilting Program"
+            }]
+        }
+    ]
+}

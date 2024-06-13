@@ -1,0 +1,96 @@
+body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+#quiltFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* This will center the content vertically */
+    height: 75vh; /* This will make the container take up the full height of the viewport */
+    width: 100%;
+}
+
+#quiltBoxesContainer {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -50px;
+}
+
+#quiltFormContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: -50px;
+}
+
+#quiltBoxesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#createQuiltButton {
+    display: none;
+    margin-top: 10px;
+}
+
+.quilt {
+    display: inline-block;
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-error {
+    color: red;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ff9900;
+}
