@@ -2,6 +2,7 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 from PIL import Image
+import math
 import matplotlib.patches as patches
 from flask import Flask, render_template, request, jsonify, session
 from flask_cors import CORS, cross_origin
@@ -65,6 +66,66 @@ def addQuilt(name, color, width, height, comments=None):
         new_quilt.comments = comments
     quiltList.append(new_quilt)
     return new_quilt
+
+def find_factors(n):
+    # Check if the number is a perfect square and greater than 1
+    if math.sqrt(n) == int(math.sqrt(n)) and math.sqrt(n) > 1:
+        return int(math.sqrt(n)), int(math.sqrt(n))
+
+    # If not, find the two closest factors
+    for i in range(int(math.sqrt(n)), 1, -1):  # start from sqrt(n) and end at 2
+        if n % i == 0:
+            return i, n // i
+    else:
+        return 1, n
+
+def fit_squares(ax, width, height, colorList, quiltList):
+    # Create a dictionary from colorList
+    color_dict = dict(colorList)
+    
+    for quilt in quiltList:
+        print(quilt)
+
+    # Create a grid to keep track of occupied space
+    grid = [[0]*width for _ in range(height)]
+
+    # Sort quiltList from largest to smallest
+    quiltList = sorted(quiltList, key=lambda quilt: quilt.width * quilt.height, reverse=True)
+
+    
+    for quilt in quiltList:
+        quilt_width = int(quilt.width)
+        quilt_height = int(quilt.height)
+        # Try both orientations for each quilt
+        for quilt_width, quilt_height in [(quilt.width, quilt.height), (quilt.height, quilt.width)]:
+            if quilt.color in color_dict:
+                color = color_dict[quilt.color]
+            else:
+                print(f"Error: quilt color {quilt.color} is not a valid color.")
+            # Find the first position where the quilt fits
+            for i in range(height - quilt_height + 1):  # Ensure i doesn't exceed the height of the grid minus the height of the quilt
+                for j in range(width - quilt_width + 1):  # Ensure j doesn't exceed the width of the grid minus the width of the quilt
+                    if all(grid[i+k][j+l] == 0 for k in range(quilt_height) for l in range(quilt_width)):  # Check if all cells in the quilt's region are 0
+                        # Place the quilt
+                        small_square = patches.Rectangle((j, i), quilt_width, quilt_height, fill=True, color=color)
+                        ax.add_patch(small_square)
+
+                        # Add the quilt number to the center of the quilt
+                        ax.text(j + quilt_width / 2, i + quilt_height / 2, str(quilt.number), ha='center', va='center')
+
+                        # Update the grid
+                        for k in range(quilt_height):
+                            for l in range(quilt_width):
+                                grid[i+k][j+l] = 1
+
+                        # Break out of the j and i loops since we've placed the quilt
+                        break
+                else:
+                    continue
+                break
+            else:
+                continue
+            break
 
 @app.route('/colors', methods=['GET'])
 @cross_origin(origins=['http://127.0.0.1:5000'])
@@ -138,90 +199,16 @@ def clear_upon_refresh():
     session['quiltList'] = []
     print('Quilts cleared:', session['quiltList'])  
     return jsonify(success=True)
-    
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
 
 @app.route('/quiltmaker')
 def quiltmaker():
-    return render_template('quiltmaker.html')
+    try:
+        totalArea = sum([int(quilt.area) for quilt in quiltList])
+    except ValueError:
+        print("Error: one or more quilt areas are not valid numbers.")
 
-"""
-def find_factors(n):
-    # Check if the number is a perfect square and greater than 1
-    if math.sqrt(n) == int(math.sqrt(n)) and math.sqrt(n) > 1:
-        return int(math.sqrt(n)), int(math.sqrt(n))
-
-    # If not, find the two closest factors
-    for i in range(int(math.sqrt(n)), 1, -1):  # start from sqrt(n) and end at 2
-        if n % i == 0:
-            return i, n // i
-    else:
-        return 1, n
-
-def fit_squares(ax, width, height, colorList, quiltList):
-    # Create a dictionary from colorList
-    color_dict = dict(colorList)
-
-    # Create a grid to keep track of occupied space
-    grid = [[0]*width for _ in range(height)]
-
-    # Sort quiltList from largest to smallest
-    quiltList = sorted(quiltList, key=lambda quilt: quilt.width * quilt.height, reverse=True)
-
-    for quilt in quiltList:
-        # Try both orientations for each quilt
-        for quilt_width, quilt_height in [(quilt.width, quilt.height), (quilt.height, quilt.width)]:
-            color = color_dict[quilt.color]  # Get the color value from the dictionary
-            # Find the first position where the quilt fits
-            for i in range(height - quilt_height + 1):  # Ensure i doesn't exceed the height of the grid minus the height of the quilt
-                for j in range(width - quilt_width + 1):  # Ensure j doesn't exceed the width of the grid minus the width of the quilt
-                    if all(grid[i+k][j+l] == 0 for k in range(quilt_height) for l in range(quilt_width)):  # Check if all cells in the quilt's region are 0
-                        # Place the quilt
-                        small_square = patches.Rectangle((j, i), quilt_width, quilt_height, fill=True, color=color)
-                        ax.add_patch(small_square)
-
-                        # Add the quilt number to the center of the quilt
-                        ax.text(j + quilt_width / 2, i + quilt_height / 2, str(quilt.number), ha='center', va='center')
-
-                        # Update the grid
-                        for k in range(quilt_height):
-                            for l in range(quilt_width):
-                                grid[i+k][j+l] = 1
-
-                        # Break out of the j and i loops since we've placed the quilt
-                        break
-                else:
-                    continue
-                break
-            else:
-                continue
-            break
-
-
-info = open("quiltinfo.txt", "r")
-# Read in the quilt information
-
-quiltLines = []
-for line in info:
-   quiltLines.append(line.strip().split())
-info.close()
-
-# Create a list of quilt objects
-
-for each in quiltLines:
-    quilt = quiltInfo(each[0], each[1], each[2], int(each[3]), int(each[4]))
-    if len(each) > 6:
-        quilt.comments = each[5]
-    quiltList.append(quilt)
-
-# Calculate the total area of all quilts
-totalArea = 0
-for each in quiltList:
-    totalArea += each.area
-print( "Total area of all quilts: ", totalArea)
-
-while True:
+    totalArea = 0  # or whatever you want to do in this case
+    #while True:
     # Find the factors of the total area
     width,height = find_factors(totalArea)
     while ((width, height) == (1, totalArea)) or (width > 60) or (width < 36) or (height < width*1.5):
@@ -236,16 +223,26 @@ while True:
     ax.add_patch(square)
     ax.set_aspect('equal')
     fit_squares(ax, width, height, colorList, quiltList)
+    """
     if(len(ax.patches) == len(quiltList)):
         break
     else:
         plt.close(fig)
         totalArea += 10
-        
+    """
+    plt.xlim(0, width)
+    plt.ylim(0, height)
+    plt.gca().set_aspect('equal', adjustable='box')
+    plt.show()
+    plt.savefig('quilt.png')
+    plt.close()
+    return render_template('quiltmaker.html', quiltList=quiltList, colorList=colorList)
+    
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
 
-plt.xlim(0, width)
-plt.ylim(0, height)
-plt.gca().set_aspect('equal', adjustable='box')
-plt.show()
-plt.savefig('quilt.png')
-"""
+
+
+
+
+#<img src="{{ url_for('static', filename='plot.png', _t=time.time()) }}" alt="Plot image">-->

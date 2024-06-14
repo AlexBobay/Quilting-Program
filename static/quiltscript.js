@@ -223,11 +223,13 @@ async function submitQuilt(index) {
 }
 
 window.onload = async function() {
-    try {
-        const response = await fetch('/clear-upon-refresh');
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
-        console.error('Error:', error);
+    if (window.location.pathname === '/quiltsite') {
+        try {
+            const response = await fetch('/clear-upon-refresh');
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
     }
 }
