@@ -202,3 +202,43 @@ INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:45:37] "PUT /update-quilt/1 HTTP/1.1
 INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:45:40] "GET /getQuiltData HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:12] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:12] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:17] "POST /add_quilt HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:20] "GET /get-quilt-id/0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:20] "PUT /update-quilt/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:41] "[31m[1mPOST /add_quilt HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:47] "POST /add_quilt HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:46:58] "POST /add_quilt HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:47:07] "GET /getQuiltData HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:12] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:12] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:21] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:21] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:21] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:29] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:29] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:30] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:49] "GET /static/quiltscript.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:50:49] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:51:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:51:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:51:31] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:51:31] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:52:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:52:22] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:52:22] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:52:22] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:53:52] "POST /add_quilt HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:53:58] "GET /get-quilt-id/0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2024 00:53:58] "PUT /update-quilt/4 HTTP/1.1" 200 -
