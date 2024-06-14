@@ -1,55 +1,81 @@
 body {
-    background-color: #f8f8f8;
+    background-color: #400af5;
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #0c13e6;
     display: flex;
+    flex-direction: column; /* Change this from row to column */
+    align-items: center; /* Centers items horizontally */
+    width: 100%;
+    height: 100vh;
+}
+
+#parentContainer {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    width: auto;
+    flex-direction: row;
+    width: 100%;
     height: auto;
+    margin-bottom: 20px;
 }
 
 #quiltFormContainer {
     display: flex;
     justify-content: center;
-    align-items: center; /* This will center the content vertically */
-    height: 75vh; /* This will make the container take up the full height of the viewport */
-    width: 100%;
-}
-
-#quiltBoxesContainer {
-    flex: 3;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
     align-items: center;
-    margin-top: -50px;
-}
-
-#quiltFormContainer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: -50px;
+    width: 50%;
+    height: auto;
+    margin-top: 100px; /* Adjust as needed */
 }
 
 #quiltBoxesContainer {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    margin-top: 100px; /* Adjust as needed */
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: row;
+    }
+
+    #quiltFormContainer, #quiltBoxesContainer {
+        flex: 0 0 100%;
+        margin: 10px 0;
+    }
+}
+
+#unitsContainer {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+    margin-bottom: 20px;
+}
+
+#saveQuiltButton{
+    display: none;
+    margin-left: 10px;
 }
 
 #createQuiltButton {
     display: none;
-    margin-top: 10px;
+    margin-left: 10px;
 }
 
+#jsonFileInput {
+    margin-left: 10px;
+}
+
+#headerContainer{
+    display: flex;
+    flex-direction: column;
+}
 .quilt {
     display: inline-block;
     border: 1px solid #000;
@@ -63,16 +89,11 @@ body {
     color: red;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 h1 {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto; /* Centers the h1 element */
+    text-align: center; /* Aligns the text to the center */
 }
 
 p {

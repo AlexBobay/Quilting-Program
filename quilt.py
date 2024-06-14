@@ -7,6 +7,7 @@ import matplotlib.patches as patches
 from flask import Flask, render_template, request, jsonify, session
 from flask_cors import CORS, cross_origin
 import logging
+import csv
 #import quilt  # Assuming quilt.py is in the same directory
 
 logging.basicConfig(filename='flask.log', level=logging.DEBUG)
@@ -21,10 +22,9 @@ class quiltInfo:
     def __str__(self):
         return f'QuiltInfo(id={self.id}, name={self.name}, color={self.color}, width={self.width}, height={self.height}, comments={self.comments})'
     
-    def __init__(self, number, name, color, width, height, comments=""):
+    def __init__(self, name, color, width, height, comments=""):
         self.id = quiltInfo.next_id  # Assign the next ID to this quilt
         quiltInfo.next_id += 1  # Increment the next ID
-        self.number = number
         self.name = name
         self.color = color
         self.width = width
@@ -55,6 +55,10 @@ colorList = (("navy", (0, 0, 0.5, 1)),
 
 @app.route('/')
 def home():
+    global quiltList
+    quiltList.clear()
+    session['quiltList'].clear()
+    print('Quilts cleared:', session['quiltList']) 
     return render_template('quiltsite.html')
 
 def addQuilt(name, color, width, height, comments=None):
@@ -194,11 +198,22 @@ def get_quilt_id(index):
     else:
         return jsonify({'error': 'No quilts found'}), 404
 
-@app.route('/clear-upon-refresh', methods=['GET'])
-def clear_upon_refresh():
-    session['quiltList'] = []
-    print('Quilts cleared:', session['quiltList'])  
-    return jsonify(success=True)
+@app.route('/getQuiltData', methods=['GET'])
+def get_quilt_data():
+    try:
+        # Assuming quiltList is a list of QuiltInfo objects
+        # Convert each QuiltInfo object to a dictionary before sending
+        quilt_dicts = [quilt.__dict__ for quilt in quiltList]
+        print(quilt_dicts)
+        # Convert area and height to integers
+        for quilt_dict in quilt_dicts:
+            if 'area' in quilt_dict and quilt_dict['area'] != '':
+                quilt_dict['area'] = int(quilt_dict['area'])
+            if 'height' in quilt_dict and quilt_dict['height'] != '':
+                quilt_dict['height'] = int(quilt_dict['height'])
+        return jsonify(quilt_dicts)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/quiltmaker')
 def quiltmaker():
@@ -240,9 +255,6 @@ def quiltmaker():
     
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
-
-
-
 
 
 #<img src="{{ url_for('static', filename='plot.png', _t=time.time()) }}" alt="Plot image">-->

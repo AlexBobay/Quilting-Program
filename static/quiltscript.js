@@ -110,9 +110,8 @@ function createQuiltBox(quiltBox, name, color, width, height, comments){
 
         addEditButton(newQuilt, quiltBox, name, color, width, height, comments);
 
-        document.getElementById('unitsContainer').style.display = 'block';
-
         document.getElementById('createQuiltButton').style.display = 'block';
+        document.getElementById('saveQuiltButton').style.display = 'block';
         quiltForm.reset();
 }
 
@@ -222,14 +221,77 @@ async function submitQuilt(index) {
     }
 }
 
-window.onload = async function() {
-    if (window.location.pathname === '/quiltsite') {
-        try {
-            const response = await fetch('/clear-upon-refresh');
-            const data = await response.json();
+document.getElementById('saveQuiltButton').addEventListener('click', async function() {
+    try {
+        // Fetch the quilt data from the server
+        const response = await fetch('/getQuiltData');
+        if (response.headers.get('Content-Type').includes('application/json')) {
+            let quilts = await response.json();
+            quilts = quilts.map(quilt => {
+                return {
+                    ...quilt,
+                    width: parseInt(quilt.width, 10),
+                    height: parseInt(quilt.height, 10),
+                    area: parseInt(quilt.width, 10) * parseInt(quilt.height, 10)
+                };
+            });
+    
+            // Convert the quilt data to a JSON string
+            const json = JSON.stringify(quilts, null, 2);
+    
+            // Create a new Blob object with the JSON string
+            const blob = new Blob([json], {type: 'application/json'});
+    
+            // Create a URL for the Blob object
+            const url = URL.createObjectURL(blob);
+    
+            // Create a new link element
+            const link = document.createElement('a');
+    
+            // Set the href of the link to the URL of the Blob object
+            link.href = url;
+    
+            // Set the download attribute of the link to the desired file name
+            link.download = 'quilts.json';
+    
+            // Append the link to the body
+            document.body.appendChild(link);
+    
+            // Programmatically click the link
+            link.click();
+    
+            // Remove the link from the body
+            document.body.removeChild(link);
+            const data = await clearResponse.json();
             console.log(data);
-        } catch (error) {
-            console.error('Error:', error);
+        } else {
+            console.error('Expected JSON but received', await response.text());
         }
+
+        
+    } catch (error) {
+        console.error('Error:', error);
     }
-}
+});
+
+document.getElementById('loadQuiltButton').addEventListener('click', function() {
+    var fileInput = document.getElementById('jsonFileInput');
+    var file = fileInput.files[0];
+    if (file) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                var data = JSON.parse(e.target.result);
+                quiltList = data;
+            } catch (error) {
+                console.error('Error parsing JSON:', error);
+            }
+        };
+        reader.onerror = function() {
+            console.error('Error reading file:', reader.error);
+        };
+        reader.readAsText(file);
+    } else {
+        console.error('No file selected');
+    }
+});
