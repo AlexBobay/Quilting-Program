@@ -282,7 +282,31 @@ document.getElementById('loadQuiltButton').addEventListener('click', function() 
         reader.onload = function(e) {
             try {
                 var data = JSON.parse(e.target.result);
-                quiltList = data;
+                addQuilt = data;
+
+                // Send a POST request to the server with the loaded data
+                fetch('/load_quilts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    var quiltBox = document.getElementById('quiltBox');
+                    for (var i = 0; i < addQuilt.length; i++) {
+                        var quilt = addQuilt[i];
+                        if (quilt.hasOwnProperty('name') && quilt.hasOwnProperty('color') && quilt.hasOwnProperty('width') && quilt.hasOwnProperty('height') && quilt.hasOwnProperty('comments')) {
+                            createQuiltBox(quiltBox, quilt.name, quilt.color, quilt.width, quilt.height, quilt.comments);
+                        } else {
+                            console.error('Quilt does not have all required properties:', quilt);
+                        }
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+
             } catch (error) {
                 console.error('Error parsing JSON:', error);
             }
