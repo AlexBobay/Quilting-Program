@@ -3,7 +3,10 @@ import math
 from flask import Flask, render_template, request, jsonify, session
 from flask_cors import CORS, cross_origin
 import logging
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
+import base64
+from io import BytesIO
+import os
 
 #import quilt  # Assuming quilt.py is in the same directory
 
@@ -53,11 +56,12 @@ colorList = (("navy", (0, 0, 0.5, 1)),
 ("indigo", (0.29, 0, 0.51, 1)),
 ("violet", (0.93, 0.51, 0.93, 1)))
 
-colorList = [(name, tuple(int(c * 255) for c in color)) for name, color in colorList]
+colorList = [(name, tuple(int(c * 255) if i < 3 else c for i, c in enumerate(color))) for name, color in colorList]
 @app.route('/')
 def home():
-    global quiltList
+    global quiltList, img_str
     quiltList.clear()
+    img_str = None
     if 'quiltList' not in session:
         session['quiltList'] = []
     else:
@@ -76,12 +80,6 @@ def addQuilt(name, color, width, height, comments=None):
     return new_quilt
 
 def find_factors(n):
-    # Check if the number is a perfect square and greater than 1
-    if math.sqrt(n) == int(math.sqrt(n)) and math.sqrt(n) > 1:
-        root = int(math.sqrt(n))
-        if root % 10 == 0:  # Check if the root is a multiple of 10
-            return root, root
-
     # If not, find the two closest factors
     for i in range(int(math.sqrt(n)), 1, -1):  # start from sqrt(n) and end at 2
         if n % i == 0:
@@ -89,7 +87,17 @@ def find_factors(n):
             if i % 10 == 0 and other_factor % 10 == 0:  # Check if both factors are multiples of 10
                 return i, other_factor
     else:
-        return 1, n  # Return None, None if no suitable factors are found
+        # Round up both factors to the nearest 10
+        i = math.ceil(i / 10.0) * 10
+        n = math.ceil(n / 10.0) * 10
+        return i, n  # Return factors rounded up to the nearest 100 if no suitable factors are found
+
+def adjust_dimensions(totalArea):
+    width, height = find_factors(totalArea)
+    while (width, height) == (10, totalArea/10) or not (600 < width < 1200) or not (height > width*1.5):
+        totalArea += 100
+        width, height = find_factors(totalArea)
+    return width, height, totalArea
 
 def fit_squares(width, height, colorList, quiltList, d):
     print("Fitting squares")
@@ -100,48 +108,46 @@ def fit_squares(width, height, colorList, quiltList, d):
     # Create a grid to keep track of occupied space
     grid = [[0]*width for _ in range(height)]
     quiltList = [quilt for quilt in quiltList if isinstance(quilt, quiltInfo)]
-
-    print(f"Number of quilts: {len(quiltList)}")  # Check if quiltList is empty
     
     # Sort quiltList from largest to smallest
     quiltList = sorted(quiltList, key=lambda quilt: quilt.width * quilt.height, reverse=True)
     
     quiltsAdded = 0
+    font = ImageFont.truetype("arial", 25)
     for quilt in quiltList:
-        print(f"Processing quilt {quilt.id}")
+        quiltPlaced = False
         quilt_width = int(quilt.width)
         quilt_height = int(quilt.height)
         # Try both orientations for each quilt
         for quilt_width, quilt_height in [(quilt.width, quilt.height), (quilt.height, quilt.width)]:
             if quilt.color in color_dict:
                 color = color_dict[quilt.color]
-            else:
-                print(f"Error: quilt color {quilt.color} is not a valid color.")
             # Find the first position where the quilt fits
-            for i in range(height - quilt_height + 1, height + 1, 10):
-                for j in range(width - quilt_width + 1, width + 1, 10):
+            for i in range(0, height - quilt_height + 1,10):
+                if quiltPlaced:
+                    break
+                for j in range(0, width - quilt_width + 1, 10):
                     if all(grid[i+k][j+l] == 0 for k in range(quilt_height) for l in range(quilt_width)):  # Check if all cells in the quilt's region are 0
                         # Place the quilt
                         d.rectangle([j, i, j+quilt_width, i+quilt_height], fill=color)
 
+                        # Calculate the center of the quilt
+                        center_x = j + quilt_width // 2
+                        center_y = i + quilt_height // 2
+
                         # Add the quilt number to the center of the quilt
-                        d.text((j+quilt_width//2, i+quilt_height//2), str(quilt.id), fill='black')
+                        d.text((center_x, center_y), str(quilt.id), fill='black', font=font, anchor="mm", stroke_width=2, stroke_fill='white')
 
                         # Update the grid
                         for k in range(quilt_height):
                             for l in range(quilt_width):
                                 grid[i+k][j+l] = 1
                         
-                        print(f"Placed quilt {quilt.id} at position ({j}, {i})")
                         quiltsAdded += 1
-                        # Break out of the j and i loops since we've placed the quilt
+                        quiltPlaced = True
                         break
-                else:
-                    continue
-                break
-            else:
-                continue
-            break
+                if quiltPlaced:  # If the quilt is placed in the first orientation, break the loop and don't try the second orientation
+                    break
     return quiltsAdded
         
 
@@ -249,9 +255,7 @@ def make_quilt(quiltList):
         print("Error: one or more quilt areas are not valid numbers.")
 
     width,height = find_factors(totalArea)
-    while ((width, height) == (1, totalArea)) or (width > 600) or (width < 360) or (height < width*1.5):
-        totalArea += 100
-        width,height = find_factors(totalArea)
+    width, height, totalArea = adjust_dimensions(totalArea)
     print("Width, Height: ", width, height)
 
     finalQuilt = Image.new('RGB', (width, height), 'white')
@@ -259,22 +263,52 @@ def make_quilt(quiltList):
     quiltsAdded = fit_squares(width, height, colorList, quiltList, d)
    
     while quiltsAdded != len(quiltList):
+        print ("Quilts Added: ", quiltsAdded)
+        quiltsAdded = 0
         finalQuilt.close()
-        finalQuilt = Image.new('RGB', (width, height), 'white')
-        totalArea += 100
+        totalArea += 1000
         width,height = find_factors(totalArea)
+        width, height, totalArea = adjust_dimensions(totalArea)
         print("Width, Height: ", width, height)
-        fit_squares(width, height, colorList, quiltList, totalArea)
+        finalQuilt = Image.new('RGB', (width, height), 'white')
+        d = ImageDraw.Draw(finalQuilt)
+        quiltsAdded = fit_squares(width, height, colorList, quiltList, d)
     
-    finalQuilt.show()
-        
+    finalQuilt.save("finalQuilt.png")
+
+    # Convert the image to base64
+    buffer = BytesIO()
+    finalQuilt.save(buffer, format="PNG")
+    img_str = base64.b64encode(buffer.getvalue()).decode()
+
+    return img_str
+
+make_quilt_flag = True  
 
 @app.route('/quiltmaker')
 def quiltmaker():
+    global make_quilt_flag
+
+    # Reset the IDs of the quilts
+    for i, quilt in enumerate(quiltList, start=1):
+        quilt.id = i
+
+    # Check if the image file exists and the 'make_quilt' flag is False
+    if not os.path.exists('img_str.txt') or make_quilt_flag:
+        # If not, or if the 'make_quilt' flag is True, generate the image string
+        img_str = make_quilt(quiltList)
+        # Store the image string in a file
+        with open('img_str.txt', 'w') as f:
+            f.write(img_str)
+        # Set the 'make_quilt' flag to False
+        make_quilt_flag = False
+
+    # Read the image string from the file
+    with open('img_str.txt', 'r') as f:
+        img_str = f.read()
+
     # Render the template first
-    response = render_template('quiltmaker.html', quiltList=quiltList, colorList=colorList)
-    # Then call make_quilt
-    make_quilt(quiltList)
+    response = render_template('quiltmaker.html', quiltList=quiltList, colorList=colorList, img_str=img_str)
     # Return the rendered template
     return response
 
@@ -283,4 +317,3 @@ if __name__ == '__main__':
         app.run(debug=True, port=5000)
 
 run_flask_app()
-#<img src="{{ url_for('static', filename='plot.png', _t=time.time()) }}" alt="Plot image">-->

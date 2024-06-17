@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bama's Boutique</title>
+    <title>Tshirts2Quilts</title>
 </head>
 <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='style.css') }}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
@@ -10,7 +10,7 @@
 <body>
 
     <div id = "headerContainer">
-        <h1>Bama's Boutique</h1>
+        <h1>Tshirts2Quilts</h1>
     </div>
 
     <div id="parentContainer">
@@ -55,6 +55,7 @@
     <input type="button" id="submitQuiltButton" value="Submit Quilt" onclick="submitQuilt(lastIndex)" style="display: none;">
     <input type="button" id="saveQuiltButton" value="Save Quilt">
     <input type="file" id="jsonFileInput" accept=".json">
+    <input type="button" id="clearQuiltsButton" value="Clear Quilts" onclick="clearQuilts()" style="display: none;">
     <button id="loadQuiltButton">Load Quilts</button>
     <input type="button" id="createQuiltButton" value="Create Quilt" onclick="window.location.href='quiltmaker'">
 </div>

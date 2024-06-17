@@ -1,129 +1,8 @@
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:56:32] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:56:32] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:56:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:56:32] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:56:39] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:56:40] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:56:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:56:40] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:56:40] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:12] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:12] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:12] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:32] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:32] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:32] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:38] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:39] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:39] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:57:39] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:03] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:04] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:04] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:09] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:11] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:11] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:11] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:36] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:36] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:36] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:44] "POST /add_quilt HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:47] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:47] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:47] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:47] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 21:59:47] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:11] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:11] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:11] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:28] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:29] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:29] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:33] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:33] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:33] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:51] "POST /add_quilt HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:54] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:54] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:01:54] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:11] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:11] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:11] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:20] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:21] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:21] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:21] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:21] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:02:21] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:50:39] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:50:44] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:50:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:50:44] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:50:44] "GET /colors HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
@@ -132,115 +11,91 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting P
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:52:23] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:52:28] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:52:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:52:28] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:52:28] "GET /colors HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:54:08] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:54:10] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:54:10] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:54:10] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:54:10] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:54:10] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:06:20] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:06:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:06:20] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:06:20] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:06:25] "[35m[1mPOST /load_quilts HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:55:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:55:13] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:55:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:55:13] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:55:19] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:55:19] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:55:19] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:55:19] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:55:19] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:11:02] "[35m[1mPOST /load_quilts HTTP/1.1[0m" 500 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:12:13] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:12:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:12:13] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:12:13] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:12:18] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:12:20] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:12:20] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:12:20] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:12:20] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:14:14] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:14:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:14:14] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:14:14] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:56:01] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:56:02] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:56:02] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:56:02] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 20:56:02] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:14:28] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:14:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:14:28] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:14:28] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:14:35] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:18:08] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:18:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:18:08] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:18:08] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:18:15] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:18:17] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:18:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:18:17] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:18:17] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:21:17] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:21:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:21:18] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:21:18] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:21:24] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:21:26] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:21:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:21:26] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:21:26] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:31] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:31] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:37] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:38] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:38] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:38] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:24:38] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:27:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:27:50] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:27:51] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:27:51] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:27:51] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:27:51] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:22:35] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:22:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:22:36] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:22:36] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:22:41] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:22:44] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:22:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:22:44] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:22:44] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:28:39] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:28:39] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:28:39] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:28:40] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:28:40] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:29:35] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:29:36] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:29:36] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:29:36] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:29:36] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
@@ -249,21 +104,20 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting P
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:32:04] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:32:05] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:32:05] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:32:05] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:32:05] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:24:08] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:24:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:24:08] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:24:08] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:24:14] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:24:18] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:24:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:24:18] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:24:18] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:33:04] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:33:09] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:33:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:33:09] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:33:09] "GET /colors HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
@@ -272,21 +126,91 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting P
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:37:28] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:37:33] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:37:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:37:33] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:37:33] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:38:13] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:38:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:38:13] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:38:13] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:11] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:11] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:11] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:11] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:11] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:24] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:28] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:28] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:28] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:33] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:33] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:33] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:42] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:42] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:39:43] "GET /colors HTTP/1.1" 200 -
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:25:36] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:25:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:25:36] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:25:36] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:25:42] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:26:04] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:26:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:26:04] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:26:04] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:05] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:05] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:14] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:18] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:18] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:18] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:24] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:24] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:40:24] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:20] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:21] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:21] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:21] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:21] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:28] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:33] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:33] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:43:33] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:44:58] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:45:03] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:45:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:45:03] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:45:03] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:45:08] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:45:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:45:08] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:45:08] "GET /colors HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
@@ -295,202 +219,119 @@ INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting P
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:48:33] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:48:38] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:48:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:48:38] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:48:38] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:48:47] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:48:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:48:47] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:48:48] "GET /colors HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:40] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:44] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:44] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:44] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:47] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:47] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:47] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:50] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:50] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:50] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:51] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:51] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:51] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:52] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:52] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:52] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:53] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:53] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:53] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:57] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:57] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:57] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:58] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:58] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:49:58] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:50:58] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:50:58] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:50:58] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:50:58] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:50:58] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:51:10] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:51:11] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:51:11] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:51:11] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:51:11] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:05] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:06] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:06] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:06] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:06] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:34] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:34] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:34] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:34] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:47] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:52] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:53] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:53] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:52:53] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:05] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:06] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:06] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:19] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:23] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:24] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:24] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:27] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:27] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:27] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:31] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:32] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:32] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:53:32] "GET /colors HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 819-023-273
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:21] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:25] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:26] "GET /static/quiltscript.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:26] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:31] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:31] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:31] "GET /colors HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:34] "POST /load_quilts HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:36] "GET /quiltmaker HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:36] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 21:56:36] "GET /colors HTTP/1.1" 200 -
 INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
 INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:33:02] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:33:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:33:02] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:33:02] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:33:08] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:34:27] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:34:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:34:28] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:34:28] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:34:33] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:35:10] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:35:10] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:35:10] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:35:10] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:35:10] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:39:36] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:39:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:39:36] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:39:36] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:39:41] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:41:16] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:41:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:41:17] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:41:17] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:41:24] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:41:25] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:41:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:41:25] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:41:25] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:42:06] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:42:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:42:06] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:42:06] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:42:11] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:42:11] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:42:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:42:11] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:42:12] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:35] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:35] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:35] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:41] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:42] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:42] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:43] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:43] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:44:43] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:45:30] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:45:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:45:30] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:45:30] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:45:34] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:45:36] "GET /quiltmaker HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:45:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:45:36] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:45:36] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:48:17] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:48:17] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:48:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:48:17] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:48:23] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:15] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:15] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:16] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:20] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:54] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:54] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:54] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:54] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:50:54] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug: * Detected change in 'C:\\Users\\ourgo\\source\\repos\\Quilting Program\\quilt.py', reloading
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:54:08] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:54:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:54:08] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:54:08] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:54:13] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:41] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:42] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:42] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:46] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:47] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:47] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:47] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:47] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [15/Jun/2024 22:57:47] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug: * Restarting with stat
-WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 819-023-273
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:43] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:43] "[36mGET /static/quiltscript.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:43] "GET /colors HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:50] "POST /load_quilts HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:51] "[35m[1mGET /quiltmaker HTTP/1.1[0m" 500 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:51] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:51] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-INFO:werkzeug:127.0.0.1 - - [16/Jun/2024 01:23:51] "[36mGET /quiltmaker?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -

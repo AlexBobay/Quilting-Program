@@ -66,6 +66,19 @@ body {
     margin-left: 10px;
 }
 
+#loadQuiltButton {
+    margin-left: 10px;
+}
+
+@media print {
+    #quilt-container img {
+        page-break-after: always !important;
+    }
+    button {
+        display: none !important;
+    }
+}
+
 #jsonFileInput {
     margin-left: 10px;
 }

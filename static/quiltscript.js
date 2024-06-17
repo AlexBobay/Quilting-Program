@@ -56,6 +56,8 @@ async function addQuilt() {
         var quiltBox = document.getElementById('quiltBox');
         createQuiltBox(quiltBox, name, color, width, height, comments, quiltForm);
     }
+
+    document.getElementById('clearQuiltsButton').style.display = 'block';
                 
     try {
         var response = await fetch('http://127.0.0.1:5000/add_quilt', {
@@ -300,6 +302,7 @@ document.getElementById('loadQuiltButton').addEventListener('click', function() 
                         var quilt = addQuilt[i];
                         if (quilt.hasOwnProperty('name') && quilt.hasOwnProperty('color') && quilt.hasOwnProperty('width') && quilt.hasOwnProperty('height') && quilt.hasOwnProperty('comments')) {
                             createQuiltBox(quiltBox, quilt.name, quilt.color, quilt.width, quilt.height, quilt.comments);
+                            document.getElementById('clearQuiltsButton').style.display = 'block';
                         } else {
                             console.error('Quilt does not have all required properties:', quilt);
                         }
@@ -319,3 +322,16 @@ document.getElementById('loadQuiltButton').addEventListener('click', function() 
         console.error('No file selected');
     }
 });
+
+function clearQuilts() {
+    // Get the quiltBox element
+    var quiltBox = document.getElementById('quiltBox');
+
+    // Remove all quilts from the quiltBox
+    while (quiltBox.firstChild) {
+        quiltBox.removeChild(quiltBox.firstChild);
+    }
+
+    // Hide the "Clear Quilts" button
+    document.getElementById('clearQuiltsButton').style.display = 'none';
+}
