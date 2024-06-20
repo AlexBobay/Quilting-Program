@@ -1,7 +1,9 @@
 body {
-    background-color: #400af5;
-    font-family: Arial, sans-serif;
-    color: #0c13e6;
+    background-image: url('assets/image.png');
+    background-size: cover;
+    font-family: 'Garagmond' !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #ffffff !important;
     display: flex;
     flex-direction: column; /* Change this from row to column */
     align-items: center; /* Centers items horizontally */
@@ -22,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 48%;
+    width: 30%;
     height: auto;
     margin-top: 100px; /* Adjust as needed */
 }
@@ -32,7 +34,7 @@ body {
     flex-direction: column; /* Stack the boxes vertically */
     justify-content: flex-start;
     align-items: flex-start;
-    width: 50%;
+    width: 70%;
     max-width: 100%;
     height: 500px;
     overflow: auto;
@@ -70,12 +72,26 @@ body {
     margin-left: 10px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 @media print {
+    @page {
+        margin: 0;
+    }
+    body {
+        margin: 0;
+    }
     #quilt-container img {
         page-break-after: always !important;
     }
     button {
         display: none !important;
+    }
+    #kofi-button {
+        display: none;
     }
 }
 
@@ -86,6 +102,10 @@ body {
 #headerContainer{
     display: flex;
     flex-direction: column;
+}
+
+#kofi-button {
+    margin-bottom: 50px;
 }
 .quilt {
     display: inline-block;

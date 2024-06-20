@@ -7,8 +7,8 @@ from PIL import Image, ImageDraw, ImageFont
 import base64
 from io import BytesIO
 import os
-
-#import quilt  # Assuming quilt.py is in the same directory
+import time
+import json
 
 logging.basicConfig(filename='flask.log', level=logging.DEBUG)
 app = Flask(__name__)
@@ -22,9 +22,12 @@ class quiltInfo:
     def __str__(self):
         return f'QuiltInfo(id={self.id}, name={self.name}, color={self.color}, width={self.width}, height={self.height}, comments={self.comments})'
     
-    def __init__(self, name, color, width, height, comments=""):
-        self.id = quiltInfo.next_id  # Assign the next ID to this quilt
-        quiltInfo.next_id += 1  # Increment the next ID
+    def __init__(self, name, color, width, height, comments="", id=None):
+        if id is None:
+            self.id = quiltInfo.next_id  # Assign the next ID to this quilt
+            quiltInfo.next_id += 1  # Increment the next ID
+        else:
+            self.id = id
         self.name = name
         self.color = color
         self.width = width*10
@@ -34,7 +37,30 @@ class quiltInfo:
 
     @classmethod
     def from_dict(cls, data):
-        return cls(data['name'], data['color'], data['width'], data['height'], data.get('comments', ""))
+        return cls(
+            data['name'],
+            data['color'],
+            data['width'],
+            data['height'],
+            data.get('comments', ""),
+            id=data.get('id')
+        )
+    
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'color': self.color,
+            'width': self.width / 10,
+            'height': self.height / 10,
+            'area': self.area,
+            'comments': self.comments,
+        }
+    
+    def __eq__(self, other):
+        if isinstance(other, quiltInfo):
+            return self.__dict__ == other.__dict__
+        return False
 
 quiltList = []
 
@@ -44,7 +70,7 @@ colorList = (("navy", (0, 0, 0.5, 1)),
 ("goldenrod", (0.85, 0.65, 0.13, 1)),
 ("blue", (0, 0, 1, 1)),
 ("red", (1, 0, 0, 1)),
-("white", (0.3, 0.7, 0.4, 1)),
+("white", (1, 1, 1, 1)),
 ("green", (0, 0.5, 0, 1)),
 ("brown", (0.65, 0.16, 0.16, 1)),
 ("burgundy", (0.5, 0, 0.13, 1)),
@@ -69,6 +95,60 @@ def home():
     print('Quilts cleared:', session['quiltList']) 
     return render_template('quiltsite.html')
 
+#these have to be on top or else the code will not work
+@app.route('/get_units', methods=['POST'])
+def get_units():
+    data = request.get_json()
+    print('Received data:', data)  # Add this line
+    if data and 'units' in data:
+        units = data.get('units')
+        if units is not None:
+            session['units'] = units  # Store units in session
+            print("Units: ", units)
+            return jsonify({'units': units})
+        else:
+            print("Units key is present but the value is None")
+            return jsonify({'error': 'Units key is present but the value is None'}), 400
+    else:
+        print("No data provided or units not included in data")
+        return jsonify({'error': 'No data provided or units not included in data'}), 400
+        
+#for the color picker
+@app.route('/colors', methods=['GET'])
+@cross_origin(origins=['http://127.0.0.1:5000'])
+def get_colors():
+    color_list = [color[0] for color in colorList]  # Extract the color names from the tuples
+    return jsonify(color_list)
+
+#for adding quilts
+@app.route('/add_quilt', methods=['POST'])
+@cross_origin(origins=['http://127.0.0.1:5000'])
+def add_quilt():
+    data = request.get_json()
+    print(data)  # Add this line to print the data received from the client
+    name = data.get('name')
+    color = data.get('color')
+    width = data.get('width')
+    
+    height = data.get('height')
+    comments = data.get('comments', '')
+
+    if name is None or not name:
+        return jsonify({"message": "Name is required"}), 400
+    if color is None or not color:
+        return jsonify({"message": "Color is required"}), 400
+    if width is None or not width:
+        return jsonify({"message": "Width is required"}), 400
+    if height is None or not height:
+        return jsonify({"message": "Height is required"}), 400
+    try:
+        addQuilt(name, color, width, height, comments)
+    except Exception as e:
+        print(f"Error when adding quilt: {e}")
+        return jsonify({"message": f"Error when adding quilt: {e}"}), 500
+    
+    return jsonify({"message": "Quilt added successfully"}), 200
+
 def addQuilt(name, color, width, height, comments=None):
     if not width or not height:
         raise ValueError("Width and height cannot be None or empty")
@@ -79,6 +159,72 @@ def addQuilt(name, color, width, height, comments=None):
     quiltList.append(new_quilt)
     return new_quilt
 
+#for editing quilts
+@app.route('/get-quilt-id/<int:index>', methods=['GET'])
+@cross_origin(origins=['http://127.0.0.1:5000'])
+def get_quilt_id(index):
+    # Assuming quiltList is a list of quiltInfo objects
+    if index >= 0 and index < len(quiltList):
+        return jsonify({'id': quiltList[index].id})
+    else:
+        return jsonify({'error': 'No quilts found'}), 404
+
+@app.route('/update-quilt/<int:id>', methods=['PUT'])
+def update_quilt(id):
+    # Get the new values from the request
+    new_values = request.get_json()
+
+    # Find the quilt with the given ID and update its properties
+    for quilt in quiltList:
+        if quilt.id == id:
+            if 'name' in new_values:
+                quilt.name = new_values['name']
+            if 'color' in new_values:
+                quilt.color = new_values['color']
+            if 'width' in new_values:
+                quilt.width = new_values['width']
+            if 'height' in new_values:
+                quilt.height = new_values['height']
+            if 'comments' in new_values:
+                quilt.comments = new_values['comments']
+            for each in quiltList:
+                print(each)
+            return jsonify(quilt.__dict__), 200 
+    # If no quilt with the given ID was found, return an error
+    return jsonify({'error': 'Quilt not found'}), 404
+
+# for saving quilts
+@app.route('/getQuiltData', methods=['GET'])
+def get_quilt_data():
+    try:
+        # Assuming quiltList is a list of QuiltInfo objects
+        # Convert each QuiltInfo object to a dictionary before sending
+        quilt_dicts = [quilt.__dict__ for quilt in quiltList]
+        print(quilt_dicts)
+        # Convert area and height to integers
+        for quilt_dict in quilt_dicts:
+            if 'area' in quilt_dict and quilt_dict['area'] != '':
+                quilt_dict['area'] = int(quilt_dict['area'])
+            if 'height' in quilt_dict and quilt_dict['height'] != '':
+                quilt_dict['height'] = int(quilt_dict['height'])
+        return jsonify(quilt_dicts)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+    
+#for loading quilts
+@app.route('/load_quilts', methods=['POST'])
+def load_quilts():
+    data = request.get_json()
+    if data:
+        quiltList.clear()
+        for quilt_data in data:
+            quilt = quiltInfo.from_dict(quilt_data)   # Convert dictionary to Quilt instance
+            quiltList.append(quilt)
+        return jsonify({'status': 'success', 'message': 'Quilts loaded successfully'}), 200
+    else:
+        return jsonify({'status': 'error', 'message': 'No data provided'}), 400
+    
+#for creating the final quilt
 def find_factors(n):
     # If not, find the two closest factors
     for i in range(int(math.sqrt(n)), 1, -1):  # start from sqrt(n) and end at 2
@@ -94,7 +240,15 @@ def find_factors(n):
 
 def adjust_dimensions(totalArea):
     width, height = find_factors(totalArea)
-    while (width, height) == (10, totalArea/10) or not (600 < width < 1200) or not (height > width*1.5):
+    units = session.get('units')  # Retrieve units from session
+    #print('Units:', units)  # Add this line
+    if units == 'in':
+        min_width = 600
+        max_width = 1200
+    else:
+        min_width = 1520
+        max_width = 3050
+    while (width, height) == (10, totalArea/10) or not (min_width < width < max_width) or not (height > width*1.5):
         totalArea += 100
         width, height = find_factors(totalArea)
     return width, height, totalArea
@@ -129,7 +283,7 @@ def fit_squares(width, height, colorList, quiltList, d):
                 for j in range(0, width - quilt_width + 1, 10):
                     if all(grid[i+k][j+l] == 0 for k in range(quilt_height) for l in range(quilt_width)):  # Check if all cells in the quilt's region are 0
                         # Place the quilt
-                        d.rectangle([j, i, j+quilt_width, i+quilt_height], fill=color)
+                        d.rectangle([j, i, j+quilt_width, i+quilt_height], fill=color, outline='black')
 
                         # Calculate the center of the quilt
                         center_x = j + quilt_width // 2
@@ -148,105 +302,14 @@ def fit_squares(width, height, colorList, quiltList, d):
                         break
                 if quiltPlaced:  # If the quilt is placed in the first orientation, break the loop and don't try the second orientation
                     break
+    for i in range(height):
+        for j in range(width):
+            if grid[i][j] == 0:  # If the cell is unclaimed
+                # Alternate the color based on the sum of the coordinates
+                color = 'red' if ((i // 2) + (j // 2)) % 2 == 0 else 'white'
+                d.point((j, i), fill=color)
     return quiltsAdded
-        
 
-@app.route('/colors', methods=['GET'])
-@cross_origin(origins=['http://127.0.0.1:5000'])
-def get_colors():
-    color_list = [color[0] for color in colorList]  # Extract the color names from the tuples
-    return jsonify(color_list)
-
-@app.route('/add_quilt', methods=['POST'])
-@cross_origin(origins=['http://127.0.0.1:5000'])
-def add_quilt():
-    data = request.get_json()
-    print(data)  # Add this line to print the data received from the client
-    name = data.get('name')
-    color = data.get('color')
-    width = data.get('width')
-    
-    height = data.get('height')
-    comments = data.get('comments', '')
-
-    if name is None or not name:
-        return jsonify({"message": "Name is required"}), 400
-    if color is None or not color:
-        return jsonify({"message": "Color is required"}), 400
-    if width is None or not width:
-        return jsonify({"message": "Width is required"}), 400
-    if height is None or not height:
-        return jsonify({"message": "Height is required"}), 400
-    try:
-        addQuilt(name, color, width, height, comments)
-    except Exception as e:
-        print(f"Error when adding quilt: {e}")
-        return jsonify({"message": f"Error when adding quilt: {e}"}), 500
-    
-    return jsonify({"message": "Quilt added successfully"}), 200
-
-@app.route('/update-quilt/<int:id>', methods=['PUT'])
-def update_quilt(id):
-    # Get the new values from the request
-    new_values = request.get_json()
-
-    # Find the quilt with the given ID and update its properties
-    for quilt in quiltList:
-        if quilt.id == id:
-            if 'name' in new_values:
-                quilt.name = new_values['name']
-            if 'color' in new_values:
-                quilt.color = new_values['color']
-            if 'width' in new_values:
-                quilt.width = new_values['width']
-            if 'height' in new_values:
-                quilt.height = new_values['height']
-            if 'comments' in new_values:
-                quilt.comments = new_values['comments']
-            for each in quiltList:
-                print(each)
-            return jsonify(quilt.__dict__), 200 
-    # If no quilt with the given ID was found, return an error
-    return jsonify({'error': 'Quilt not found'}), 404
-
-@app.route('/get-quilt-id/<int:index>', methods=['GET'])
-@cross_origin(origins=['http://127.0.0.1:5000'])
-def get_quilt_id(index):
-    # Assuming quiltList is a list of quiltInfo objects
-    if index >= 0 and index < len(quiltList):
-        return jsonify({'id': quiltList[index].id})
-    else:
-        return jsonify({'error': 'No quilts found'}), 404
-
-@app.route('/getQuiltData', methods=['GET'])
-def get_quilt_data():
-    try:
-        # Assuming quiltList is a list of QuiltInfo objects
-        # Convert each QuiltInfo object to a dictionary before sending
-        quilt_dicts = [quilt.__dict__ for quilt in quiltList]
-        print(quilt_dicts)
-        # Convert area and height to integers
-        for quilt_dict in quilt_dicts:
-            if 'area' in quilt_dict and quilt_dict['area'] != '':
-                quilt_dict['area'] = int(quilt_dict['area'])
-            if 'height' in quilt_dict and quilt_dict['height'] != '':
-                quilt_dict['height'] = int(quilt_dict['height'])
-        return jsonify(quilt_dicts)
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/load_quilts', methods=['POST'])
-def load_quilts():
-    data = request.get_json()
-    if data:
-        quiltList.clear()
-        for quilt_data in data:
-            quilt = quiltInfo.from_dict(quilt_data)   # Convert dictionary to Quilt instance
-            quiltList.append(quilt)
-        return jsonify({'status': 'success', 'message': 'Quilts loaded successfully'}), 200
-    else:
-        return jsonify({'status': 'error', 'message': 'No data provided'}), 400
-    
 def make_quilt(quiltList):
     try:
         totalArea = sum([int(quilt.area) for quilt in quiltList])  # Use dot notation
@@ -283,34 +346,48 @@ def make_quilt(quiltList):
 
     return img_str
 
-make_quilt_flag = True  
-
 @app.route('/quiltmaker')
 def quiltmaker():
-    global make_quilt_flag
+    
+    # Load the previous quiltList
+    try:
+        with open('previous_quilt_list.json', 'r') as f:
+            previous_quilt_list = [quiltInfo.from_dict(quilt_dict) for quilt_dict in json.load(f)]
+            if previous_quilt_list:
+                quiltInfo.next_id = max(quilt.id for quilt in previous_quilt_list) + 1
+    except FileNotFoundError:
+        previous_quilt_list = None
 
     # Reset the IDs of the quilts
     for i, quilt in enumerate(quiltList, start=1):
         quilt.id = i
 
     # Check if the image file exists and the 'make_quilt' flag is False
-    if not os.path.exists('img_str.txt') or make_quilt_flag:
+    if previous_quilt_list is None or [quilt.to_dict() for quilt in previous_quilt_list] != [quilt.to_dict() for quilt in quiltList]:
         # If not, or if the 'make_quilt' flag is True, generate the image string
         img_str = make_quilt(quiltList)
         # Store the image string in a file
         with open('img_str.txt', 'w') as f:
             f.write(img_str)
         # Set the 'make_quilt' flag to False
-        make_quilt_flag = False
+
+        # Save the quiltList to a file
+        with open('previous_quilt_list.json', 'w') as f:
+            json.dump([quilt.to_dict() for quilt in quiltList], f)
 
     # Read the image string from the file
     with open('img_str.txt', 'r') as f:
         img_str = f.read()
-
+    
     # Render the template first
     response = render_template('quiltmaker.html', quiltList=quiltList, colorList=colorList, img_str=img_str)
     # Return the rendered template
     return response
+
+
+# Save the quiltList to a file
+with open('previous_quilt_list.json', 'w') as f:
+    json.dump(quiltList, f)
 
 if __name__ == '__main__':
     def run_flask_app():

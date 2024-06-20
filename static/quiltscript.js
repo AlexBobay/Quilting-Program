@@ -1,3 +1,4 @@
+// for the color dropdown
 $(document).ready(function() {
     $.get('http://127.0.0.1:5000/colors', function(data) {
         var colorSelect = document.getElementById('color');
@@ -11,10 +12,31 @@ $(document).ready(function() {
     });
 });
 
+const colorList = {
+    "navy": "#000080",
+    "black": "#000000",
+    "gray": "#808080",
+    "goldenrod": "#DAA520",
+    "blue": "#0000FF",
+    "red": "#FF0000",
+    "white": "#FFFFFF",
+    "green": "#008000",
+    "brown": "#A62929",
+    "burgundy": "#800021",
+    "lightblue": "#ADD8E6",
+    "neongreen": "#4CFF00",
+    "skyblue": "#87CFFF",
+    "orange": "#FF8000",
+    "yellow": "#FFFF00",
+    "indigo": "#4A0082",
+    "violet": "#EE82EE"
+};
+
 let editMode = false;  // Track whether we're in "add" mode or "edit" mode
 var quilts = [];
 var lastIndex = -1;
 
+// Add a new quilt
 async function addQuilt() {
     var name = document.getElementById('name').value;
     var nameError = document.getElementById('nameError');
@@ -97,6 +119,7 @@ function createQuiltBox(quiltBox, name, color, width, height, comments){
         quiltBox.style.display = 'block';  // Show the quiltBox
         var newQuilt = document.createElement('div');
         newQuilt.className = 'quilt';
+        newQuilt.style.backgroundColor = colorList[color];
         newQuilt.innerHTML = `
             <h2>${name}</h2>
             <p>Color: ${color}</p>
@@ -334,4 +357,25 @@ function clearQuilts() {
 
     // Hide the "Clear Quilts" button
     document.getElementById('clearQuiltsButton').style.display = 'none';
+}
+
+function sendUnits(){
+    var unitsContainer = document.getElementById('units');
+    var selectedUnit = unitsContainer.options[units.selectedIndex].value;
+    console.log( 'Sending units:', selectedUnit);
+    fetch('/get_units', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            units: selectedUnit
+          }),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+    window.location.href = 'quiltmaker';
 }

@@ -16,23 +16,23 @@
     <div id="parentContainer">
         <div id="quiltFormContainer">
             <form id="quiltForm">
-                <label for="name">Name (Required):</label><br>
+                <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name"><br>
                 <small id="nameError" class="form-error"></small><br>
 
-                <label for="color">Color (Required):</label><br>
+                <label for="color">Color:</label><br>
                 <select id="color" name="color"></select>
                 <small id="colorError" class="form-error"></small><br>
 
-                <label for="width">Width (Required):</label><br>
+                <label for="width">Width:</label><br>
                 <input type="number" id="width" name="width" min="1"><br>
                 <small id="widthError" class="form-error"></small><br>
 
-                <label for="height">Height (Required):</label><br>
+                <label for="height">Height:</label><br>
                 <input type="number" id="height" name="height" min="1"><br>
                 <small id="heightError" class="form-error"></small><br>
 
-                <label for="comments">Comments:</label><br>
+                <label for="comments">Comments (Optional):</label><br>
                 <textarea id="comments" name="comments"></textarea><br>
             </form>
         </div>
@@ -45,19 +45,19 @@
     <div id="unitsContainer">
         <label for="units">Units:</label><br>
         <select id="units" name="units">
-            <option value="cm">Centimeters</option>
             <option value="in">Inches</option>
+            <option value="cm">Centimeters</option>
         </select><br>
     </div>
 
 <div id="buttonContainer">
-    <input type="button" id="addQuiltButton" value="Add Quilt" onclick="addQuilt()">
-    <input type="button" id="submitQuiltButton" value="Submit Quilt" onclick="submitQuilt(lastIndex)" style="display: none;">
-    <input type="button" id="saveQuiltButton" value="Save Quilt">
+    <input type="button" id="addQuiltButton" value="Add Shirt" onclick="addQuilt()">
+    <input type="button" id="submitQuiltButton" value="Submit Shirt" onclick="submitQuilt(lastIndex)" style="display: none;">
+    <input type="button" id="saveQuiltButton" value="Save Shirt">
     <input type="file" id="jsonFileInput" accept=".json">
-    <input type="button" id="clearQuiltsButton" value="Clear Quilts" onclick="clearQuilts()" style="display: none;">
-    <button id="loadQuiltButton">Load Quilts</button>
-    <input type="button" id="createQuiltButton" value="Create Quilt" onclick="window.location.href='quiltmaker'">
+    <input type="button" id="clearQuiltsButton" value="Clear Shirts" onclick="clearQuilts()" style="display: none;">
+    <input type = "button" id="loadQuiltButton" value = "Load Shirt">
+    <input type="button" id="createQuiltButton" value="Create Quilt" onclick="sendUnits()">
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
