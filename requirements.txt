@@ -1,0 +1,6 @@
+Flask
+flask-cors
+Pillow
+Jinja2 
+numpy
+boto3

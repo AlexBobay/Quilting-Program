@@ -391,6 +391,6 @@ with open('previous_quilt_list.json', 'w') as f:
 
 if __name__ == '__main__':
     def run_flask_app():
-        app.run(debug=True, port=5000)
+        app.run(host='0.0.0.0', debug=True, port=5000)
 
 run_flask_app()
