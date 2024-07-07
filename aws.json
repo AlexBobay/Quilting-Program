@@ -1,0 +1,49 @@
+{
+    "family": "tshirts2quilts",
+    "networkMode": "awsvpc",
+    "executionRoleArn": "arn:aws:iam::your-account-id:role/ecsTaskExecutionRole", 
+    "containerDefinitions": [
+      {
+        "name": "peaceful_panini",
+        "image": "quilt-app:latest",
+        "cpu": 256,
+        "memory": 512,
+        "portMappings": [ 
+          {
+            "containerPort": 5000,
+            "hostPort": 5000,
+            "protocol": "tcp"
+          }
+        ],
+        "essential": true,
+        "environment": [
+          {
+            "name": "NAME",
+            "value": "World"
+          }
+        ],
+        "command": [
+          "python",
+          "quilt.py"
+        ],
+        "workingDirectory": "/app",
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "/ecs/your-application-name",
+            "awslogs-region": "your-region",
+            "awslogs-stream-prefix": "ecs"
+          }
+        }
+      }
+    ],
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "256",
+    "memory": "512",
+    "tags": [
+      {
+        "key": "Name",
+        "value": "tshirts2quilts"
+      }
+    ]
+  }
